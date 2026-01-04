@@ -1,3 +1,6 @@
+terraform init
+
+
 
 **Azure**
 
