@@ -21,7 +21,7 @@ jobs:
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
       run: |
-        cd terraform/azure
+        cd azure/terraform
         terraform init
         terraform plan
 
@@ -30,7 +30,7 @@ jobs:
       env:
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
       run: |
-        cd terraform/gcp
+        cd GCP/terraform
         echo "$GCP_SA_KEY" > key.json
         export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/key.json
         terraform init
